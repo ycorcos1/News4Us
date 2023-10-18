@@ -7,9 +7,9 @@ import BreakingNews from "./pages/BreakingNews";
 
 export const AppContext = createContext();
 
-const BREAKING_URL = `https://newsapi.org/v2/top-headlines?apiKey=a78f98488ea0469e8dab62abe7963279&country=us`;
+const BREAKING_URL = `https://newsapi.org/v2/top-headlines?apiKey=&country=us`;
 const API_URL =
-  "https://newsapi.org/v2/everything?apiKey=a78f98488ea0469e8dab62abe7963279";
+  "https://newsapi.org/v2/everything?apiKey=";
 
 function App() {
   const [searchKeyword, setSearchKeyword] = useState("");
