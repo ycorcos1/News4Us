@@ -1,0 +1,22 @@
+.header {
+    height: 75px;
+    /* width: 100%; */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #c8af00;
+    font-size: 64px;
+    text-shadow: 10px 10px 5px black;
+  }
+
+  .header a{
+    text-decoration: none;
+}
