@@ -10,10 +10,7 @@
   font-family: 'Courier New', Courier, monospace;
   background-color: rgb(40,50,60);
   padding: 4rem; 
-  align-items: center;
-  width: calc(100vw - 125px);
-  height: calc(100vh - 125px);
-  flex-wrap: wrap;
+  min-height: 100vh;
 }
 
 body{

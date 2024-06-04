@@ -9,6 +9,7 @@ export const AppContext = createContext();
 function App() {
   const [searchKeyword, setSearchKeyword] = useState("");
   const [articles, setArticles] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   const getBreakingNews = async (category) => {
     const response = await fetch(
@@ -16,7 +17,8 @@ function App() {
     );
     const data = await response.json();
     setArticles(data.articles);
-    console.log(data);
+    setSelectedCategory(category);
+    console.log(selectedCategory);
   };
 
   const searchKeywordArticles = async () => {
@@ -37,6 +39,8 @@ function App() {
           setArticles,
           getBreakingNews,
           searchKeywordArticles,
+          selectedCategory,
+          setSelectedCategory,
         }}
       >
         <Routes>

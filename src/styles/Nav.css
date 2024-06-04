@@ -1,9 +1,12 @@
 .nav {
     align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 25px;
 }
 
-.nav button {
+.deselectedcat {
     background: rgb(180,190,200);
     justify-content: center;
     align-items: center;
@@ -13,8 +16,19 @@
     font-size: 16px;
     border-radius: 20px;
     border: none;
-    /* transition: background-color 0.5s ease, color 0.5s ease; */
+    margin: 10px;
+}
 
+.selectedcat {
+    background-color: gold;
+    justify-content: center;
+    align-items: center;
+    color: rgb(40,50,60);
+    font-family: Arial, sans-serif;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
     margin: 10px;
 }
 
@@ -22,5 +36,4 @@
     background-color: gold;
     color: rgb(40,50,60);
     border: none;
-    /* transform: scale(1.1, 1.1); */
 }

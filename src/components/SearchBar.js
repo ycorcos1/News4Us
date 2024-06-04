@@ -5,8 +5,12 @@ import { Link } from "react-router-dom";
 import "../styles/SearchBar.css";
 
 function SearchBar() {
-  const { searchKeyword, setSearchKeyword, searchKeywordArticles } =
-    useContext(AppContext);
+  const {
+    searchKeyword,
+    setSearchKeyword,
+    searchKeywordArticles,
+    setSelectedCategory,
+  } = useContext(AppContext);
 
   return (
     <>
@@ -15,7 +19,12 @@ function SearchBar() {
           placeholder="Search for articles using keywords..."
           onChange={(e) => setSearchKeyword(e.target.value)}
         />
-        <Link to={`/results/${searchKeyword}`}>
+        <Link
+          to={`/results/${searchKeyword}`}
+          onClick={() => {
+            setSelectedCategory("");
+          }}
+        >
           <img
             src={SearchIcon}
             alt="search"

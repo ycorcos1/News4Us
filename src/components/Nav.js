@@ -4,77 +4,134 @@ import { Link } from "react-router-dom";
 import "../styles/Nav.css";
 
 function Nav() {
-  const { getBreakingNews } = useContext(AppContext);
+  const { getBreakingNews, setSelectedCategory, selectedCategory } =
+    useContext(AppContext);
+
+  const getSelectedCategory = (category) => {
+    if (selectedCategory === category) {
+      return "selectedcat";
+    } else {
+      return "deselectedcat";
+    }
+  };
 
   return (
     <div className="nav">
-      <Link to="/results/general">
+      <Link
+        to="/results/general"
+        onClick={() => {
+          getBreakingNews("general");
+        }}
+      >
         <button
+          className={getSelectedCategory("general")}
           onClick={() => {
-            getBreakingNews("general");
+            setSelectedCategory("general");
           }}
         >
           General
         </button>
       </Link>
-      <Link to="/results/world">
+      <Link
+        to="/results/world"
+        onClick={() => {
+          getBreakingNews("world");
+        }}
+      >
         <button
+          className={getSelectedCategory("world")}
           onClick={() => {
-            getBreakingNews("world");
+            setSelectedCategory("world");
           }}
         >
           World
         </button>
       </Link>
-      <Link to="/results/business">
+      <Link
+        to="/results/business"
+        onClick={() => {
+          getBreakingNews("business");
+        }}
+      >
         <button
+          className={getSelectedCategory("business")}
           onClick={() => {
-            getBreakingNews("business");
+            setSelectedCategory("business");
           }}
         >
           Business
         </button>
       </Link>
-      <Link to="/results/technology">
+      <Link
+        to="/results/technology"
+        onClick={() => {
+          getBreakingNews("technology");
+        }}
+      >
         <button
+          className={getSelectedCategory("technology")}
           onClick={() => {
-            getBreakingNews("technology");
+            setSelectedCategory("technology");
           }}
         >
           Technology
         </button>
       </Link>
-      <Link to="/results/sports">
+      <Link
+        to="/results/sports"
+        onClick={() => {
+          getBreakingNews("sports");
+        }}
+      >
         <button
+          className={getSelectedCategory("sports")}
           onClick={() => {
-            getBreakingNews("sports");
+            setSelectedCategory("sports");
           }}
         >
           Sports
         </button>
       </Link>
-      <Link to="/results/science">
+      <Link
+        to="/results/science"
+        onClick={() => {
+          getBreakingNews("science");
+        }}
+      >
         <button
+          className={getSelectedCategory("science")}
           onClick={() => {
-            getBreakingNews("science");
+            setSelectedCategory("science");
           }}
         >
           Science
         </button>
       </Link>
-      <Link to="/results/health">
+      <Link
+        to="/results/health"
+        onClick={() => {
+          getBreakingNews("health");
+        }}
+      >
         <button
+          className={getSelectedCategory("health")}
           onClick={() => {
-            getBreakingNews("health");
+            setSelectedCategory("health");
           }}
         >
           Health
         </button>
       </Link>
-      <Link to="/results/entertainment">
+      <Link
+        to="/results/entertainment"
+        onClick={() => {
+          getBreakingNews("entertainment");
+        }}
+      >
         <button
+          className={getSelectedCategory("entertainment")}
           onClick={() => {
-            getBreakingNews("entertainment");
+            setSelectedCategory("entertainment");
           }}
         >
           Entertainment
